@@ -60,7 +60,7 @@ class GenomicSite:
 		for freq in self.ref_freq:
 			if freq != 'NA': sums[self.ref_allele] += float(freq)
 		# normalize proportions
-		total = sum(sums.values())
+		total = sum(list(sums.values()))
 		if total > 0:
 			for allele in sums:
 				props[allele] = float('%.3g' % (sums[allele]/total))

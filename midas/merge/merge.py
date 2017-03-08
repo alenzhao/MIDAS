@@ -85,7 +85,7 @@ def select_species(args, type='genes'):
 				species[id] = Species(id, species_info) # initialize new species
 			species[id].samples.append(sample) # append sample
 	# dict to list
-	species = species.values()
+	species = list(species.values())
 	# remove species with an insufficient number of samples
 	species = [sp for sp in species if len(sp.samples) >= int(args['min_samples'])]
 	# sort by number of samples

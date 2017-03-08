@@ -64,7 +64,7 @@ class GenomicSite:
 		for freq, alt_allele in zip(self.ref_freq, self.alt_allele):
 			freqs[self.ref_allele] += float(freq)
 			if alt_allele != 'NA': freqs[alt_allele] += 1-float(freq)
-		total = sum(freqs.values())
+		total = sum(list(freqs.values()))
 		if total > 0:
 			for allele in freqs:
 				freqs[allele] = freqs[allele]/total

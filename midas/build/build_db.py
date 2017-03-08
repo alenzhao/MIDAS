@@ -61,7 +61,7 @@ class Pangenome:
 		self.dir = '%s/pan_genomes/%s' % (outdir, sp.id)
 		self.tmp = '%s/temp' % self.dir
 		self.species = sp
-		self.genomes = sp.genomes.values()
+		self.genomes = list(sp.genomes.values())
 		self.stats = {}
 		self.stats['genomes'] = len(self.genomes)
 		self.count_genes = 0
@@ -249,10 +249,10 @@ def read_species(args):
 		# make sure at least 1 rep genome/species
 		if sp.rep_genome is None:
 			sp.rep_genome = sp.genomes.keys()[0]
-	return species.values()
+	return list(species.values())
 
 def read_genomes(species):
-	genomes = sum([sp.genomes.values() for sp in species], [])
+	genomes = sum([list(sp.genomes.values()) for sp in species], [])
 	return genomes
 
 def build_repgenome_db(args, genomes, species):
@@ -371,7 +371,7 @@ class MarkerGenes:
 				hits[r['target']] = r
 			elif r['evalue'] < hits[r['target']]['evalue']:
 				hits[r['target']] = r
-		return hits.values()
+		return list(hits.values())
 
 	def hsblastn_index(self, fasta):
 		command = "hs-blastn index %s " % fasta
