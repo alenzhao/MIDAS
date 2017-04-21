@@ -7,16 +7,16 @@ MIDAS is written in Python and runs on Linux and OSX
 
 Download the software:  
 `git clone https://github.com/snayfach/MIDAS`  
-[read more...] (install.md)
+[read more...](install.md)
 
 Install python dependencies as needed:  
 `python MIDAS/setup.py install`  
-[read more...] (install.md)
+[read more...](install.md)
 
 Download & unpack reference database:  
 [http://lighthouse.ucsf.edu/MIDAS/midas_db_v1.2.tar.gz](http://lighthouse.ucsf.edu/MIDAS/midas_db_v1.2.tar.gz)  
 `tar -zxvf midas_db_v1.2.tar.gz`  
-[read more...] (ref_db.md)
+[read more...](ref_db.md)
 
 Update your environment:  
 `export PYTHONPATH=$PYTHONPATH:MIDAS`  
@@ -49,7 +49,7 @@ First, create a new directory to store per-sample outputs:
 
 The basic command to run midas per sample is:  
  `run_midas.py {species, genes, snps} outdir [options]`
- 
+
 You can use the `-h` flag to get more info on any of the commands:  
 `run_midas.py -h`  
 `run_midas.py species -h`  
@@ -60,24 +60,24 @@ You can use the `-h` flag to get more info on any of the commands:
 `run_midas.py species midas_output/sample_1 -1 example/sample_1.fq.gz`  
 `run_midas.py species midas_output/sample_2 -1 example/sample_2.fq.gz`
 
-* This enables automatically profiling strain-level variation of all species in downstream modules. 
-* [read more...] (species.md)
+* This enables automatically profiling strain-level variation of all species in downstream modules.
+* [read more...](species.md)
 
 #### 2) Profile strain-level gene content of abundant species  
 `run_midas.py genes midas_output/sample_1 -1 example/sample_1.fq.gz`  
-`run_midas.py genes midas_output/sample_2 -1 example/sample_2.fq.gz` 
+`run_midas.py genes midas_output/sample_2 -1 example/sample_2.fq.gz`
 
 * Requires that you've already run (1)
-* Output files contain estimated pan-genome gene copy numbers for all abundant species 
-* [read more...] (cnvs.md)
+* Output files contain estimated pan-genome gene copy numbers for all abundant species
+* [read more...](cnvs.md)
 
 #### 3) Profile strain-level nucleotide variants of abundant species
 `run_midas.py snps midas_output/sample_1 -1 example/sample_1.fq.gz`  
-`run_midas.py snps midas_output/sample_2 -1 example/sample_2.fq.gz` 
+`run_midas.py snps midas_output/sample_2 -1 example/sample_2.fq.gz`
 
 * Requires that you've already run (1)  
-* Output files contain genome-wide nucleotide variation statistics for all abundant species 
-* [read more...] (snvs.md)
+* Output files contain genome-wide nucleotide variation statistics for all abundant species
+* [read more...](snvs.md)
 
 
 ###Merge MIDAS results across samples
@@ -95,7 +95,7 @@ You can use the `-h` flag to get more info on any of the commands:
 `merge_midas.py snps -h`   
 
 
-#### 1) Merge species abundance across samples 
+#### 1) Merge species abundance across samples
 
 `merge_midas.py species merged_species -i midas_out/sample_1,midas_out/sample_2 -t list`     
 
@@ -108,9 +108,9 @@ species_prevalence.txt
 ```
 Those files can be looked at with your favorite spreadsheet or text editor for more careful analysis.
 
-* [read more...] (merge_species.md)
+* [read more...](merge_species.md)
 
-#### 2) Merge strain-level pan-genome results across samples 
+#### 2) Merge strain-level pan-genome results across samples
 `merge_midas.py genes merged_genes -i midas_out/sample_1,midas_out/sample_2 -t list`  
 
 The results will be in a folder named `merged_genes`, which will contain a sub-folder for each species that satisfies the coverage criterion for inclusion.
@@ -128,7 +128,7 @@ genes_summary.txt
 ```
 Those files can be looked at with your favorite spreadsheet or text editor for more careful analysis.
 
-* [read more...] (merge_cnvs.md)
+* [read more...](merge_cnvs.md)
 
 #### 3) Merge strain-level nucleotide variant results across samples  
 `merge_midas.py snps ./merged_snps -i midas_out/sample_1,midas_out/sample_2 -t list`    
@@ -149,4 +149,4 @@ snps_summary.txt
 ```
 Those files can be looked at with your favorite spreadsheet or text editor for more careful analysis.
 
-* [read more...] (merge_snvs.md)
+* [read more...](merge_snvs.md)
