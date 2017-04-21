@@ -40,18 +40,18 @@ Each genome-cluster was annotated according to the consensus (i.e., most common)
 
 ### Genomic database construction
 
-**Marker-genes**
+<b>Marker-genes</b>
 
 * Database of universal-single-copy genes (15 gene families)
 * Metagenomic reads are initially mapped to these genes estimate the relative abundance of all species in the reference database
 
-**Representative genome**
+<b>Representative genome</b>
 
 * Individual reference genome per species
 * Genome was picked in order to minimize marker-gene distance to other genomes clustered in the same species
 * Metagenomic reads are mapped to the represenative genome to identify single-nucleotide-polymorphisms
 
-**Pan-genome**
+<b>Pan-genome</b>
 
 * The set of non-redundant genes (99% DNA identity) across all genomes within each species
 * Mapping between 99% identity gene clusters and gene clusters at lower % identity clustering thresholds (95, 90, 85, 80, and 75)

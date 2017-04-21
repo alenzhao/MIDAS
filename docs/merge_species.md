@@ -43,10 +43,10 @@ optional arguments:
 ## Outputs
 This script generates the following files:  
 
-* **relative_abundance.txt**: relative abundance matrix (columns are samples, rows are species)
-* **count_reads.txt**: read count matrix (columns are samples, rows are species)
-* **coverage.txt**: genome coverage matrix (columns are samples, rows are species)
-* **species_prevalence.txt**: summary statistics for each species across samples
+* <b>relative_abundance.txt</b>: relative abundance matrix (columns are samples, rows are species)
+* <b>count_reads.txt</b>: read count matrix (columns are samples, rows are species)
+* <b>coverage.txt</b>: genome coverage matrix (columns are samples, rows are species)
+* <b>species_prevalence.txt</b>: summary statistics for each species across samples
 
 species_prevalence output format:
 
