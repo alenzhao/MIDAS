@@ -5,11 +5,11 @@ This script will allow you to quantify the genomic diversity of a bacterial popu
 Before running these scripts, you'll need to have run `merge_midas.py snps` [read more](https://github.com/snayfach/MIDAS/blob/master/docs/merge_snvs.md).
 
 
-####USAGE:
+#### Usage:
 
 `snp_diversity.py --indir /path/to/snps/species_id --out /path/to/output [options]`
 
-####INPUT/OUTPUT OPTIONS:
+#### Input/output options:
 
 <b>--indir PATH</b>  
 Path to output from 'merge_midas.py snps' for one species.  
@@ -18,7 +18,7 @@ Directory should be named according to a species_id and contains files 'snps_*.t
 <b>--out PATH</b>  
 Path to output file  
 
-####DIVERSITY OPTIONS:  
+#### Diversity options:  
 <b>--genomic_type {'genome-wide', 'per-gene'}</b>  
 Compute diversity for individual genes or genome-wide (genome-wide)  
 
@@ -33,7 +33,7 @@ Compute diversity using subset of genomic sites sites (ALL)
 ALL=all-sites, NC=non-coding, CDS=coding, XD=X-fold-degenerate-sites  
 
 
-####SAMPLE SELECTION OPTIONS:  
+#### Sample selection options:  
 <b>--sample_depth FLOAT</b>  
 Minimum average read depth per sample (0.0)  
 
@@ -56,7 +56,7 @@ Maximum number of samples to process (use all)
 Useful for quick tests  
 
 
-####GENOMIC SITE SELECTION OPTIONS:  
+#### Genomic site selection options:  
 <b>--site_depth INT</b>  
 Minimum number of mapped reads per site per sample (2)  
 
@@ -84,7 +84,7 @@ Useful for quick tests
 <b>--rand_sites FLOAT</b>  
 Randomly select FLOAT proportion of genomic sites that pass quality control  
 
-####READ SELECTION OPTIONS:  
+#### Read selection options:  
 <b>--rand_reads INT</b>  
 Randomly select INT reads from each sample for each genomic site  
 

@@ -42,7 +42,7 @@ Running MIDAS can be conceptually broken down in three steps:
 * these are the scripts currently in `/path/to/MIDAS/scripts/analysis`  
 * at the moment they experimental but will be available directly on `/path/to/MIDAS/scripts` in the next update
 
-###Run MIDAS per-sample
+### Run MIDAS per-sample
 
 First, create a new directory to store per-sample outputs:  
 `mkdir midas_output`  
@@ -80,7 +80,7 @@ You can use the `-h` flag to get more info on any of the commands:
 * [read more...](snvs.md)
 
 
-###Merge MIDAS results across samples
+### Merge MIDAS results across samples
 
 The basic command usage of merge scripts is:  
  `merge_midas.py {species, genes, snps} outdir -i input -t intype [options]`
