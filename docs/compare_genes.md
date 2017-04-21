@@ -1,14 +1,14 @@
 ## Gene Content Dynamics
 
-These scripts will allow you to compare the gene content of a species between all pairs of metagenomic samples. 
+These scripts will allow you to compare the gene content of a species between all pairs of metagenomic samples.
 
 Before running these scripts, you'll need to have run:   
-`merge_midas.py genes` [read more] (https://github.com/snayfach/MIDAS/blob/master/docs/merge_snvs.md).
+`merge_midas.py genes` [read more](https://github.com/snayfach/MIDAS/blob/master/docs/merge_snvs.md).
 
 
 ####Command usage:
 
-``` 
+```
 compare_genes.py --indir <PATH> --out <PATH> [options]
 
   --indir PATH          Path to output from 'merge_midas.py genes' for one species
@@ -52,5 +52,4 @@ compare_genes.py --indir <PATH> --out <PATH> [options]
   count2: number of present genes in sample2  
   count_either: number of genes in sample1 or sample2  
   count_both: number of genes in sample1 and sample2  
-  distance: dissimilarity between gene sets 
-
+  distance: dissimilarity between gene sets

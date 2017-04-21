@@ -3,7 +3,7 @@ Description of how the MIDAS database was constructed, how the species groups co
 
 ## Install reference database
 
-#### Step 1. download default database 
+#### Step 1. download default database
 Download the latest version from your browser:   
 [http://lighthouse.ucsf.edu/MIDAS/midas_db_v1.2.tar.gz](http://lighthouse.ucsf.edu/MIDAS/midas_db_v1.2.tar.gz)
 
@@ -27,25 +27,25 @@ Alternatively, you can manually specify the database location when you run MIDAS
 ex: `run_midas.py species outdir -d midas_db_v1.2 [options]`
 
 ## Build custom database
-Alternatively, you can build a custom database with your own genome sequences [read more] (build_db.md)
+Alternatively, you can build a custom database with your own genome sequences [read more](build_db.md)
 
 ## Description of default database
 
 ### Identification of bacterial species
 Contains 31,007 bacterial reference genomes clustered into 5,952 species groups. Species groups are based on 96.5% sequence identity across 30 universal marker genes. These groups correspond to the gold-standard definition of bacterial species based on 95% genome-wide average nucleotide identity (ANI):  
 <img src="../images/genome_clusters.jpg" width="400" align="center"/>   
-    
+
 Each genome-cluster was annotated according to the consensus (i.e., most common) Latin name of named genomes within the cluster. 18% of genomes disagree with the consensus name. 47% of the discrepancies are due to genomes that have no species name (ex: Streptococcus unclassified). 29% are due to genomes that agree with the consensus name, but are split from a larger genome-cluster with the same Latin name. 24% of discrepancies are because the name of the genome differs from the consensus name (ex: Prevotella copri strain1234 assigned to genome-cluster Bacteroides ovatus):  
 <img src="../images/taxonomy_discrepancy.jpg" width="500" align="center"/>   
-      
+
 ### Genomic database construction
 
 **Marker-genes**
 
-* Database of universal-single-copy genes (15 gene families) 
+* Database of universal-single-copy genes (15 gene families)
 * Metagenomic reads are initially mapped to these genes estimate the relative abundance of all species in the reference database
 
-**Representative genome** 
+**Representative genome**
 
 * Individual reference genome per species
 * Genome was picked in order to minimize marker-gene distance to other genomes clustered in the same species
@@ -66,4 +66,4 @@ Species-level coverage of the MIDAS reference database was estimated across meta
 <img src="../images/database_coverage.jpg" width="500" align="center"/>  
 
 ## Next step
-[Run MIDAS on an example dataset] (tutorial.md)
+[Run MIDAS on an example dataset](tutorial.md)

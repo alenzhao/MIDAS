@@ -2,7 +2,7 @@
 
 This script will allow you to quantify the genomic diversity of a bacterial population. Diversity can be computed genome-wide, for different classes of genomic sites, or for individual genes. Additionally, diversity can be computed for populations from individual metagenomic samples, or based on data pooled across samples. Finally, there are many options to filter genomic sites.
 
-Before running these scripts, you'll need to have run `merge_midas.py snps` [read more] (https://github.com/snayfach/MIDAS/blob/master/docs/merge_snvs.md).
+Before running these scripts, you'll need to have run `merge_midas.py snps` [read more](https://github.com/snayfach/MIDAS/blob/master/docs/merge_snvs.md).
 
 
 ####USAGE:
@@ -21,7 +21,7 @@ Path to output file
 ####DIVERSITY OPTIONS:  
 <b>--genomic_type {'genome-wide', 'per-gene'}</b>  
 Compute diversity for individual genes or genome-wide (genome-wide)  
-	
+
 <b>--sample_type {'pooled-samples', 'per-sample'}</b>  
 Compute diversity for individual samples or for pooled data across samples (per-sample)  
 
@@ -90,5 +90,3 @@ Randomly select INT reads from each sample for each genomic site
 
 <b>--replace_reads</b>  
 If using --rand_reads, reads are randomly sampled with replacement  
-
-

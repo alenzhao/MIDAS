@@ -57,7 +57,7 @@ SNP calling options (if using --call_snps):
 
 1) run entire pipeline using defaults:  
 `run_midas.py snps /path/to/outdir -1 /path/to/reads_1.fq.gz -2 /path/to/reads_2.fq.gz`
-			
+
 2) run entire pipeline for a specific species:  
 `run_midas.py snps /path/to/outdir --species_id Bacteroides_vulgatus_57955 -1 /path/to/reads_1.fq.gz -2 /path/to/reads_2.fq.gz`
 
@@ -69,8 +69,8 @@ SNP calling options (if using --call_snps):
 
 ## Output
 
-The output of this script contains the following: 
- 
+The output of this script contains the following:
+
 * **output/**: per-species output files. are tab-delimited and gzip-compressed. named with the convention {SPECIES_ID}.snps.gz  
 * **temp/**: intermediate files. use `--remove_temp` to remove these files   
 * **summary.txt**: tab-delimited file summarizing alignments  
@@ -87,9 +87,9 @@ output file format (per species):
 * count_ref: count reference alleles observed  
 * count_alt: count alternate alleles observed  
 * depth: count total reads at ref_pos  
-* ref_freq: frequency (0.0 to 1.0) of reference allele 
+* ref_freq: frequency (0.0 to 1.0) of reference allele
 
-summary.txt file format: 
+summary.txt file format:
 
 * species_id: species identifer      
 * genome_length: length of reference genome used for read-mapping   
@@ -107,4 +107,4 @@ summary.txt file format:
 * Use `-n` and `-t` to increase throughput
 
 ## Next step
-[Merge results across samples] (merge_snvs.md)
+[Merge results across samples](merge_snvs.md)

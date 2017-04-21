@@ -11,7 +11,7 @@ The pipeline can be broken down into three main steps:
 Usage: run_midas.py genes outdir [options]
 
 positional arguments:
-  outdir                Path to directory to store results. Name should correspond to sample identifier. 
+  outdir                Path to directory to store results. Name should correspond to sample identifier.
 
 optional arguments:
   -h, --help            Show this help message and exit
@@ -52,7 +52,7 @@ Quantify genes options (if using --call_genes):
 
 1) run entire pipeline using defaults:  
 `run_midas.py genes /path/to/outdir -1 /path/to/reads_1.fq.gz -2 /path/to/reads_2.fq.gz`  
-			
+
 2) run entire pipeline for a specific species:  
 `run_midas.py genes /path/to/outdir --species_id Bacteroides_vulgatus_57955 -1 /path/to/reads_1.fq.gz -2 /path/to/reads_2.fq.gz`  
 
@@ -65,8 +65,8 @@ Quantify genes options (if using --call_genes):
 
 ## Output
 
-The output of this script generates the following files: 
- 
+The output of this script generates the following files:
+
 * **output/**: per-species output files. are tab-delimited and gzip-compressed. named with the convention {SPECIES_ID}.genes.gz  
 * **temp/**: intermediate files. use `--remove_temp` to remove these files   
 * **summary.txt**: tab-delimited file summarizing alignments  
@@ -81,7 +81,7 @@ The output of this script generates the following files:
 **summary.txt** file format:                       
 
 * species_id: species identifer      
-* pangenome_size: total number of gene families (99% identity clustering cutoff) in reference pangenome 
+* pangenome_size: total number of gene families (99% identity clustering cutoff) in reference pangenome
 * covered_genes: number of pangenome gene families with non-zero coverage   
 * fraction_covered: fraction of pangenome gene families with non-zero coverage           
 * mean_coverage: mean read-depth across gene families with non-zero coverage
@@ -92,10 +92,9 @@ The output of this script generates the following files:
 * In practice, peak memory usage will not exceed 1 Gb for most samples
 
 ## Speed
-* Speed will depend on the number of species you search and the number of reference genomes sequenced per species. 
+* Speed will depend on the number of species you search and the number of reference genomes sequenced per species.
 * For a single species with 1 reference genome, expect ~16,000 reads/second
 * Use `-n` and `-t` to increase throughput
 
 ## Next step
-[Merge results across samples] (merge_cnvs.md)
-
+[Merge results across samples](merge_cnvs.md)

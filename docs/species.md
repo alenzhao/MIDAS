@@ -5,7 +5,7 @@ Mapped reads are used estimate the read depth and relative abundance of 5,952 ba
 Reads are mapped according to gene-specific, species-level mapping thresholds (94.5-98% DNA identity)
 Reads that map equally well to 2 or more species are probabalistically assigned
 
-This module is required for downstream modules (i.e. genes and snps) if you plan to automatically identify abundant species 
+This module is required for downstream modules (i.e. genes and snps) if you plan to automatically identify abundant species
 If you already have a list of species ids that you're interested, this step can be skipped.
 
 ## Usage
@@ -13,7 +13,7 @@ If you already have a list of species ids that you're interested, this step can 
 Usage: run_midas.py species outdir [options]
 
 positional arguments:
-  outdir             Path to directory to store results. 
+  outdir             Path to directory to store results.
                      Name should correspond to unique sample identifier.
 
 optional arguments:
@@ -51,14 +51,14 @@ optional arguments:
 `run_midas.py species /path/to/outdir -1 /path/to/reads_1.fq.gz --read_length 80`
 
 ## Output
-The output of this script contains the following: 
- 
+The output of this script contains the following:
+
 * **species_profile.txt**: tab-delimited output file containing abundances of 5,952 species  
 * **temp/**: intermediate files. use `--remove_temp` to remove these files   
 * **log.txt**: log file containing parameters used  
 
 output file format:
-  
+
 * species_id: species identifier  
 * count_reads: number of reads mapped to marker genes  
 * coverage: estimated genome-coverage of species in metagenome  
@@ -74,4 +74,4 @@ output file format:
 * We found that about 1 million reads was sufficient to precisely estimate species relative abundance for a gut community
 
 ## Next step
-[Merge species abundance across samples] (merge_species.md)
+[Merge species abundance across samples](merge_species.md)

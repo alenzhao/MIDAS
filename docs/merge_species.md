@@ -53,7 +53,7 @@ species_prevalence output format:
 * species_id: species identifier      
 * species_name: unique species name    
 * mean_coverage: average read-depth across samples   
-* median_coverage: median read-depth across samples 
+* median_coverage: median read-depth across samples
 * mean_abundance: average relative abundance across samples  
 * median_abundance: median relative abundance across samples        
 * prevalence: number of samples with >= `MIN_COV`
@@ -62,6 +62,5 @@ species_prevalence output format:
 * This step takes an insignificant amount of memory  
 
 ## Next steps
-[Profile strain-level gene content of species] (cnvs.md)
-[Profile strain-level SNVs of species] (snvs.md)
-
+[Profile strain-level gene content of species](cnvs.md)
+[Profile strain-level SNVs of species](snvs.md)

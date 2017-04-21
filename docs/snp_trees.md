@@ -4,13 +4,13 @@ This script will allow you to build strain-level phylogenetic trees using consen
 
 The core-genome of a species is identified directly from the data by looking for genomic sites in the representative genome that have high coverage across multiple metagenomes.  
 
-Before running these scripts, you'll need to have run `merge_midas.py snps` [read more] (https://github.com/snayfach/MIDAS/blob/master/docs/merge_snvs.md).
+Before running these scripts, you'll need to have run `merge_midas.py snps` [read more](https://github.com/snayfach/MIDAS/blob/master/docs/merge_snvs.md).
 
 ### Step 1. Call consensus alleles
 
 ####Command usage:  
 
-``` 
+```
 call_consensus.py --indir <PATH> --out <PATH> [options]
 
   --indir PATH          path to output from 'merge_midas.py snps' for one species
@@ -38,8 +38,8 @@ call_consensus.py --indir <PATH> --out <PATH> [options]
   --site_depth INT      minimum number of mapped reads per site (2)
   --site_prev FLOAT     site has at least <site_depth> coverage in at least <site_prev> proportion of samples (0.0)
                         a value of 1.0 will select sites that have sufficent coverage in all samples.
-                        a value of 0.0 will select all sites, including those with low coverage in many samples 
-                        NAs recorded for included sites with less than <site_depth> in a sample 
+                        a value of 0.0 will select all sites, including those with low coverage in many samples
+                        NAs recorded for included sites with less than <site_depth> in a sample
   --site_maf FLOAT      minimum average-minor-allele-frequency of site across samples (0.0)
                         setting this above zero (e.g. 0.01, 0.02, 0.05) will only retain variable sites
                         by default invariant sites are also retained.
@@ -51,7 +51,7 @@ call_consensus.py --indir <PATH> --out <PATH> [options]
 
 ####Example command:  
 ```
-call_consensus.py --indir /path/to/snps --out consensus.fa --site_maf 0.01 --site_depth 5 --site_prev 0.90 --sample_depth 10 --sample_cov 0.40 --site_ratio 
+call_consensus.py --indir /path/to/snps --out consensus.fa --site_maf 0.01 --site_depth 5 --site_prev 0.90 --sample_depth 10 --sample_cov 0.40 --site_ratio
 ```
 
 This command will build a multi-FASTA of core-genome sequences   
@@ -66,11 +66,10 @@ This command will build a multi-FASTA of core-genome sequences
 Now simply use your favorite tool to build the phylogenetic tree.
 
 Example:  
-Download FastTree [here] (http://www.microbesonline.org/fasttree)  
+Download FastTree [here](http://www.microbesonline.org/fasttree)  
 And, run: `FastTree -gtr -nt < consensus.fa > consensus.tree `
 
 
 ### Step 3. Visualize tree
-From a web-browser: [iTOL] (http://itol.embl.de/)  
-Or, from R: [ape] (https://cran.r-project.org/web/packages/ape)
-
+From a web-browser: [iTOL](http://itol.embl.de/)  
+Or, from R: [ape](https://cran.r-project.org/web/packages/ape)
