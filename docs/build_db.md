@@ -40,10 +40,10 @@ Path to directory of genomes. Each subdirectory should be named with a genome id
 Genomic DNA sequence in FASTA format    
 
 \<genome_id>.faa
-Genomic DNA sequence in FASTA format
+Protein sequences in FASTA format
 
 \<genome_id>.ffn
-Protein sequences in FASTA format
+Gene sequences in FASTA format
  
 \<genome_id>.features
 File specifies genomic coordinates of genes.
